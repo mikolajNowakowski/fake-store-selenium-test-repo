@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.app</groupId>
-	<artifactId>fake-store-test-framework</artifactId>
+	<artifactId>fake-store-selenium-test-framework</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>fake-store-test-framework</name>
+	<name>fake-store-selenium-test-framework</name>
 	<description>Test framework</description>
 	<properties>
 		<java.version>21</java.version>
