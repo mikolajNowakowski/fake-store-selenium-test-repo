@@ -6,8 +6,7 @@ A framework for conducting UI tests on a specific mock e-commerce website. The p
 
 1. [Introduction](#introduction)
 2. [Key Features](#Key-Features)
-3. [Usage](#usage)
-4. [Project Structure](#Installation-and-test-execution)
+3. [Installation and test execution](#Installation-and-test-execution)
 
 
 ## Introduction
