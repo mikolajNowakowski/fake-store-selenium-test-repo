@@ -1,9 +1,9 @@
 package com.app.steps.login_registration;
 
-import com.app.SpringBootSeleniumCucumberProj.annotation.LazyAutowired;
-import com.app.SpringBootSeleniumCucumberProj.page.MyAccountPage;
-import com.app.SpringBootSeleniumCucumberProj.page.StoreHomePage;
-import com.app.SpringBootSeleniumCucumberProj.page.login_register_form.LoginFormPage;
+import com.app.annotation.LazyAutowired;
+import com.app.page.MyAccountPage;
+import com.app.page.StoreHomePage;
+import com.app.page.login_register_form.LoginFormPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

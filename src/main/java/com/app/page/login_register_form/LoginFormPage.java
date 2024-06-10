@@ -1,9 +1,9 @@
 package com.app.page.login_register_form;
 
 
-import com.app.SpringBootSeleniumCucumberProj.annotation.Page;
-import com.app.SpringBootSeleniumCucumberProj.page.base.BasePage;
-import com.app.SpringBootSeleniumCucumberProj.page.login_register_form.fragments.RegisterLoginErrorComponent;
+import com.app.annotation.Page;
+import com.app.page.base.BasePage;
+import com.app.page.login_register_form.fragments.RegisterLoginErrorComponent;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.springframework.beans.factory.annotation.Autowired;

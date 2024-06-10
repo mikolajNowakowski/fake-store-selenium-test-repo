@@ -1,9 +1,9 @@
 package com.app.steps.wish_list;
 
-import com.app.SpringBootSeleniumCucumberProj.annotation.LazyAutowired;
-import com.app.SpringBootSeleniumCucumberProj.page.shop.CategoryPage;
-import com.app.SpringBootSeleniumCucumberProj.page.shop.ProductPage;
-import com.app.SpringBootSeleniumCucumberProj.page.windows.WishListWindow;
+import com.app.annotation.LazyAutowired;
+import com.app.page.shop.CategoryPage;
+import com.app.page.shop.ProductPage;
+import com.app.page.windows.WishListWindow;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

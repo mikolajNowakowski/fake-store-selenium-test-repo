@@ -1,7 +1,7 @@
 package com.app.config.webDriver;
 
 
-import com.app.SpringBootSeleniumCucumberProj.annotation.LazyConfiguration;
+import com.app.annotation.LazyConfiguration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;

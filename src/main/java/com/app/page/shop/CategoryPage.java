@@ -1,9 +1,9 @@
 package com.app.page.shop;
 
-import com.app.SpringBootSeleniumCucumberProj.annotation.LazyAutowired;
-import com.app.SpringBootSeleniumCucumberProj.annotation.Page;
-import com.app.SpringBootSeleniumCucumberProj.page.base.BasePage;
-import com.app.SpringBootSeleniumCucumberProj.utils.SeleniumHelper;
+import com.app.annotation.LazyAutowired;
+import com.app.annotation.Page;
+import com.app.page.base.BasePage;
+import com.app.utils.SeleniumHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

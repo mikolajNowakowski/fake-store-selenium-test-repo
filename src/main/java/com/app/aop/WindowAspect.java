@@ -15,12 +15,12 @@ public class WindowAspect {
     @Autowired
     private WindowsSwitchService windowsSwitchService;
 
-    @Before("@target(window) && within(com.app.SpringBootSeleniumCucumberProj..*)")
+    @Before("@target(window) && within(com.app..*)")
     public void before(Window window) {
         windowsSwitchService.switchByTitle(window.value());
     }
 
-    @After("@target(window) && within(com.app.SpringBootSeleniumCucumberProj..*)")
+    @After("@target(window) && within(com.app..*)")
     public void after(Window window) {
         windowsSwitchService.switchByIdx(0);
     }

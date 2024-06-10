@@ -1,8 +1,8 @@
 package com.app.steps.universal;
 
-import com.app.SpringBootSeleniumCucumberProj.annotation.LazyAutowired;
-import com.app.SpringBootSeleniumCucumberProj.page.StoreHomePage;
-import com.app.SpringBootSeleniumCucumberProj.page.shop.ShopPage;
+import com.app.annotation.LazyAutowired;
+import com.app.page.StoreHomePage;
+import com.app.page.shop.ShopPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;

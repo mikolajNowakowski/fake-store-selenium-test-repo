@@ -1,6 +1,6 @@
 package com.app.utils;
 
-import com.app.SpringBootSeleniumCucumberProj.annotation.LazyAutowired;
+import com.app.annotation.LazyAutowired;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

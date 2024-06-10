@@ -1,7 +1,7 @@
 package com.app.page.windows;
 
-import com.app.SpringBootSeleniumCucumberProj.annotation.Window;
-import com.app.SpringBootSeleniumCucumberProj.page.base.BasePage;
+import com.app.annotation.Window;
+import com.app.page.base.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 

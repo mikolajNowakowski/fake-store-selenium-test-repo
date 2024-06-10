@@ -1,7 +1,7 @@
 package com.app.page.login_register_form.fragments;
 
-import com.app.SpringBootSeleniumCucumberProj.annotation.PageFragment;
-import com.app.SpringBootSeleniumCucumberProj.page.base.BasePage;
+import com.app.annotation.PageFragment;
+import com.app.page.base.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 

@@ -1,9 +1,9 @@
 package com.app.steps.product_purchase;
 
-import com.app.SpringBootSeleniumCucumberProj.annotation.LazyAutowired;
-import com.app.SpringBootSeleniumCucumberProj.model.CreditCard;
-import com.app.SpringBootSeleniumCucumberProj.model.CustomerOrderForm;
-import com.app.SpringBootSeleniumCucumberProj.page.shop.*;
+import com.app.annotation.LazyAutowired;
+import com.app.model.CreditCard;
+import com.app.model.CustomerOrderForm;
+import com.app.page.shop.*;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

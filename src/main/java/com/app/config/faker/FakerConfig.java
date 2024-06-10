@@ -1,6 +1,6 @@
 package com.app.config.faker;
 
-import com.app.SpringBootSeleniumCucumberProj.annotation.LazyConfiguration;
+import com.app.annotation.LazyConfiguration;
 import com.github.javafaker.Faker;
 import org.springframework.context.annotation.Bean;
 

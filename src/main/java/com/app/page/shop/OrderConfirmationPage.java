@@ -1,8 +1,8 @@
 package com.app.page.shop;
 
 
-import com.app.SpringBootSeleniumCucumberProj.annotation.Page;
-import com.app.SpringBootSeleniumCucumberProj.page.base.BasePage;
+import com.app.annotation.Page;
+import com.app.page.base.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 

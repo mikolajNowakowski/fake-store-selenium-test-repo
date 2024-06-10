@@ -1,7 +1,7 @@
 package com.app.steps.mappers;
 
-import com.app.SpringBootSeleniumCucumberProj.model.CreditCard;
-import com.app.SpringBootSeleniumCucumberProj.model.CustomerOrderForm;
+import com.app.model.CreditCard;
+import com.app.model.CustomerOrderForm;
 import io.cucumber.java.DataTableType;
 
 import java.util.Map;
