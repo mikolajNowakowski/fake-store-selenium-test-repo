@@ -21,18 +21,35 @@ public class CartPage extends BasePage {
     @FindBy(css = ".alt.button.checkout-button.wc-forward")
     private WebElement goToPaymentButton;
 
+    private final String productNameXpath = ".//td[@class = 'product-name']/a";
+    private final String productDeleteButtonXpath = ".//td[@class = 'remove']/a";
+
     public boolean isSpecificPositionInCart(String productKeyWord) {
         return productsInCart
                 .stream()
                 .map(webElement -> webElement
-                        .findElement(By.xpath(".//td[@class = 'product-name']/a"))
+                        .findElement(By.xpath(productNameXpath))
                         .getText()
-                        .toLowerCase())
+                        .toLowerCase()
+                        .replaceAll("[–-]", ""))
                 .peek(System.out::println)
                 .anyMatch(element -> element
                         .contains(productKeyWord
                                 .toLowerCase()
-                                .trim()));
+                                .trim()
+                                .replaceAll("[–-]", "")));
+    }
+
+
+    public CartPage removeSpecificProductFromCart(String productName) {
+        productsInCart
+                .stream()
+                .filter(element -> element.findElement(By.xpath(productNameXpath)).getText().equalsIgnoreCase(productName))
+                .findFirst()
+                .orElseThrow()
+                .findElement(By.xpath(productDeleteButtonXpath))
+                .click();
+        return this;
     }
 
 
@@ -40,6 +57,7 @@ public class CartPage extends BasePage {
         goToPaymentButton.click();
         return this;
     }
+
     @Override
     public boolean isAt() {
         return wait.until((d) -> Integer.parseInt(logoImg.getAttribute("width")) > 0);

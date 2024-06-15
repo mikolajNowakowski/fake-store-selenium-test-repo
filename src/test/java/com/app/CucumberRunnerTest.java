@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         features = "./src/test/resources/features",
         plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:","pretty"},
         glue = "com.app.steps",
-        tags = "@addingProductToWishList or @productPurchase",
+        tags = "@productRemovalFromCart",
         monochrome = true)
 @RunWith(Cucumber.class)
 public class CucumberRunnerTest {

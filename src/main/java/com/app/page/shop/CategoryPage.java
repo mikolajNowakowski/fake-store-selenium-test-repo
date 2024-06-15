@@ -28,7 +28,7 @@ public class CategoryPage extends BasePage {
     @LazyAutowired
     private SeleniumHelper seleniumHelper;
 
-    private final String titleOFProductLocator = "//h2[contains(text(),%s)]";
+    private final String titleOFProductLocator = "//h2[contains(text(),'%s')]";
     private final String addToCartButtonLinkedText = "Dodaj do koszyka";
 
 
