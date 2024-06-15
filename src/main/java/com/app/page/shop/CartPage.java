@@ -2,11 +2,14 @@ package com.app.page.shop;
 
 import com.app.annotation.Page;
 import com.app.page.base.BasePage;
+import com.app.utils.StringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
+
+import static com.app.utils.StringUtils.*;
 
 @Page
 public class CartPage extends BasePage {
@@ -22,29 +25,30 @@ public class CartPage extends BasePage {
     private WebElement goToPaymentButton;
 
     private final String productNameXpath = ".//td[@class = 'product-name']/a";
-    private final String productDeleteButtonXpath = ".//td[@class = 'remove']/a";
+    private final String productDeleteButtonXpath = ".//td[@class = 'product-remove']/a";
 
     public boolean isSpecificPositionInCart(String productKeyWord) {
         return productsInCart
                 .stream()
-                .map(webElement -> webElement
-                        .findElement(By.xpath(productNameXpath))
-                        .getText()
-                        .toLowerCase()
-                        .replaceAll("[–-]", ""))
+                .map(webElement -> removeSpecialCharsFromString(
+                        webElement
+                                .findElement(By.xpath(productNameXpath))
+                                .getText()
+                                .toLowerCase()
+                ))
                 .peek(System.out::println)
                 .anyMatch(element -> element
-                        .contains(productKeyWord
+                        .contains(removeSpecialCharsFromString(productKeyWord
                                 .toLowerCase()
                                 .trim()
-                                .replaceAll("[–-]", "")));
+                        )));
     }
 
 
     public CartPage removeSpecificProductFromCart(String productName) {
         productsInCart
                 .stream()
-                .filter(element -> element.findElement(By.xpath(productNameXpath)).getText().equalsIgnoreCase(productName))
+                .filter(element -> removeSpecialCharsFromString(element.findElement(By.xpath(productNameXpath)).getText()).equalsIgnoreCase(removeSpecialCharsFromString(productName)))
                 .findFirst()
                 .orElseThrow()
                 .findElement(By.xpath(productDeleteButtonXpath))
