@@ -1,6 +1,6 @@
 Feature: Cart operations
 
-@productRemovalFromCart
+  @productRemovalFromCart
   Scenario Outline: I want to add product to cart and remove it
     Given I am on the store home page
     When I click store button
@@ -9,9 +9,9 @@ Feature: Cart operations
     And I go to cart
     Then I will be able to see "<productName>" windsurfing in my cart
     When I delete added product from the cart "<productName>"
-    Then I will see announcement about empty cart
+    Then I will see announcement about empty cart with "<emptyCartInfo>"
     And I will see which product was deleted "<productName>"
 
     Examples:
-      | sportType   | productName      |
-      | Windsurfing | Egipt – El Gouna |
+      | sportType   | productName      | emptyCartInfo           |
+      | Windsurfing | Egipt – El Gouna | Twój koszyk jest pusty. |

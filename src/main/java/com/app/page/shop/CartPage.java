@@ -2,10 +2,10 @@ package com.app.page.shop;
 
 import com.app.annotation.Page;
 import com.app.page.base.BasePage;
-import com.app.utils.StringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.List;
 
@@ -20,6 +20,12 @@ public class CartPage extends BasePage {
 
     @FindBy(xpath = "//tr[@class = 'woocommerce-cart-form__cart-item cart_item']")
     private List<WebElement> productsInCart;
+
+    @FindBy(xpath = "//div[@class = 'cart-empty woocommerce-info']")
+    private WebElement emptyCartAnnouncement;
+
+    @FindBy(xpath = "//div[@class = 'woocommerce-message']")
+    private WebElement deletedProductAnnouncement;
 
     @FindBy(css = ".alt.button.checkout-button.wc-forward")
     private WebElement goToPaymentButton;
@@ -42,6 +48,20 @@ public class CartPage extends BasePage {
                                 .toLowerCase()
                                 .trim()
                         )));
+    }
+
+    public boolean isEmptyCartAnnouncementVisible(String announcement) {
+        return wait.until(ExpectedConditions.visibilityOf(emptyCartAnnouncement)).getText().trim().equals(announcement);
+    }
+
+    public boolean isDeletedProductAnnouncementVisible(String productName) {
+        return removeSpecialCharsFromString(
+                        wait.until(ExpectedConditions.visibilityOf(deletedProductAnnouncement))
+                        .getText().trim()
+                        .toLowerCase())
+                .contains(removeSpecialCharsFromString(productName)
+                        .trim()
+                        .toLowerCase());
     }
 
 
