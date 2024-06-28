@@ -7,6 +7,8 @@ import com.app.page.windows.WishListWindow;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
+
 
 public class WishListSteps {
 
@@ -42,5 +44,15 @@ public class WishListSteps {
     @Then("I will be able to see added {string}")
     public void iWillBeAbleToSeeAdded(String product) {
         wishListWindow.isSpecificProductOnWishList(product);
+    }
+
+    @When("I remove {string} from wish list")
+    public void iRemoveFromWishList(String productName) {
+        wishListWindow.removeProductFromWishList(productName);
+    }
+
+    @Then("I will be able to see {string} about deleted product")
+    public void iWillBeAbleToSeeAboutDeletedProduct(String message) {
+        Assert.assertTrue(wishListWindow.getProductDeletedInfo().doesInfoContains(message));
     }
 }

@@ -14,7 +14,6 @@ import static com.app.utils.StringUtils.*;
 @Page
 public class CartPage extends BasePage {
 
-
     @FindBy(xpath = "//img[@class = 'custom-logo']")
     private WebElement logoImg;
 
@@ -64,7 +63,6 @@ public class CartPage extends BasePage {
                         .toLowerCase());
     }
 
-
     public CartPage removeSpecificProductFromCart(String productName) {
         productsInCart
                 .stream()
@@ -76,7 +74,6 @@ public class CartPage extends BasePage {
         return this;
     }
 
-
     public CartPage goToPayment() {
         goToPaymentButton.click();
         return this;
@@ -86,5 +83,4 @@ public class CartPage extends BasePage {
     public boolean isAt() {
         return wait.until((d) -> Integer.parseInt(logoImg.getAttribute("width")) > 0);
     }
-
 }

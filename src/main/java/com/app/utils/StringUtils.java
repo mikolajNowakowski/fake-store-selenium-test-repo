@@ -1,7 +1,5 @@
 package com.app.utils;
 
-import org.springframework.stereotype.Component;
-
 
 public class StringUtils {
     public static String removeSpecialCharsFromString(String inputString) {

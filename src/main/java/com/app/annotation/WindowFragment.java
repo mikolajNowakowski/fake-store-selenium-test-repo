@@ -7,6 +7,6 @@ import java.lang.annotation.*;
 @Documented
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Window {
+public @interface WindowFragment {
     String value();
 }

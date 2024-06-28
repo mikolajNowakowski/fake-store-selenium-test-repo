@@ -10,7 +10,6 @@ import java.util.List;
 
 @Page
 public class OrderConfirmationPage extends BasePage {
-
     @FindBy(className = "entry-title")
     private WebElement orderSummaryTitle;
     @FindBy(xpath = "//li[@class = 'woocommerce-order-overview__date date']/strong")
