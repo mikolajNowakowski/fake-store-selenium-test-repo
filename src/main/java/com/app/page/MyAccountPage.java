@@ -20,7 +20,6 @@ public class MyAccountPage extends BasePage {
         logOutButton.click();
         return this;
     }
-
     public boolean hasSpecifiedName(String userName) {
         return userName.equals(loggedUserName.getAttribute("innerText"));
     }

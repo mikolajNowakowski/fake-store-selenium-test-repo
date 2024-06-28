@@ -11,14 +11,8 @@ public class StoreHomePage extends BasePage {
     @FindBy(css = ".custom-logo-link > img[alt='FakeStore']")
     private WebElement storeLogo;
 
-
-
     @FindBy(id = "menu-item-200")
     private WebElement cartButton;
-
-
-
-
 
     @Value("${store.url}")
     private String url;
@@ -26,10 +20,6 @@ public class StoreHomePage extends BasePage {
     public void goTo() {
         driver.get(url);
     }
-
-
-
-
 
     @Override
     public boolean isAt() {
